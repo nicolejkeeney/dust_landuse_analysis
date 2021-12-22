@@ -11,7 +11,7 @@
 #
 #Partition:
 
-#SBATCH --partition=savio_bigmem
+#SBATCH --partition=savio
 # Request one node:
 
 #SBATCH --nodes=1
