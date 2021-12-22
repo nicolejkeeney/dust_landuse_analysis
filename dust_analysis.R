@@ -9,9 +9,6 @@ library(plyr)
 library(dplyr)
 source("utils.R")
 
-# Download cropscape layers here: https://nassgeodata.gmu.edu/CropScape/
-# Select state of CA, and 
-
 # Set locations to data 
 WUSTL_FOLDER <- "data/SOIL" # Path to WUSTL data 
 CROPSCAPE_FOLDER <- "data/cropscape" # Path to folder containing cropscape rasters 
@@ -23,6 +20,7 @@ months <- 1:2 # Months to run analysis for
 # ---------------- Perform analysis ----------------
 
 # Check that paths exist 
+dir.create(OUTPUT_DIR, showWarnings=FALSE)
 lapply(c(WUSTL_FOLDER, CROPSCAPE_FOLDER, SHAPEFILE_PATH, OUTPUT_DIR), check_path)
 
 # Read in shapefile of Central Valley counties of interest 

@@ -17,3 +17,8 @@ data/*
 figs/*
 figures/* 
 
+# Rout files 
+*.Rout
+
+# slurm files 
+*slurm*

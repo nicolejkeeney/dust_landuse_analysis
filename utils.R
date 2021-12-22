@@ -28,7 +28,7 @@ read_cropscape <- function(CROPSCAPE_FOLDER, year, geom) {
   if (length(filepath) == 0) { stop(paste0("File with wildcard ",wildcard," does not exist")) } # Raise error if file doesn't exist
   
   cropscape_raster <- raster(filepath) %>% # Read in raster 
-    crop(centralValley) # Crop raster to Central Valley counties  
+    crop(geom) # Crop raster to Central Valley counties  
   return(cropscape_raster)
 }
 
