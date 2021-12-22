@@ -1,120 +1,0 @@
-starting worker pid=94832 on localhost:11293 at 17:15:12.779
-starting worker pid=94846 on localhost:11293 at 17:15:12.959
-── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
-── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
-✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-✓ tibble  3.1.4     ✓ dplyr   1.0.7
-✓ tidyr   1.1.3     ✓ stringr 1.4.0
-✓ readr   2.0.1     ✓ forcats 0.5.1
-✓ ggplot2 3.3.5     ✓ purrr   0.3.4
-✓ tibble  3.1.4     ✓ dplyr   1.0.7
-✓ tidyr   1.1.3     ✓ stringr 1.4.0
-✓ readr   2.0.1     ✓ forcats 0.5.1
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-x dplyr::filter() masks stats::filter()
-x dplyr::lag()    masks stats::lag()
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-x dplyr::filter() masks stats::filter()
-x dplyr::lag()    masks stats::lag()
-Loading required package: sp
-Loading required package: sp
-
-Attaching package: ‘raster’
-
-The following object is masked from ‘package:dplyr’:
-
-    select
-
-
-Attaching package: ‘raster’
-
-The following object is masked from ‘package:tidyr’:
-
-    extract
-
-The following object is masked from ‘package:dplyr’:
-
-    select
-
-The following object is masked from ‘package:tidyr’:
-
-    extract
-
-Linking to GEOS 3.8.1, GDAL 3.2.1, PROJ 7.2.1
-Linking to GEOS 3.8.1, GDAL 3.2.1, PROJ 7.2.1
-
-Attaching package: ‘lubridate’
-
-
-Attaching package: ‘lubridate’
-
-The following objects are masked from ‘package:raster’:
-
-    intersect, union
-
-The following objects are masked from ‘package:raster’:
-
-    intersect, union
-
-The following objects are masked from ‘package:base’:
-
-    date, intersect, setdiff, union
-
-The following objects are masked from ‘package:base’:
-
-    date, intersect, setdiff, union
-
-------------------------------------------------------------------------------
-------------------------------------------------------------------------------
-You have loaded plyr after dplyr - this is likely to cause problems.
-If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
-library(plyr); library(dplyr)
-You have loaded plyr after dplyr - this is likely to cause problems.
-If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
-library(plyr); library(dplyr)
-------------------------------------------------------------------------------
-------------------------------------------------------------------------------
-
-Attaching package: ‘plyr’
-
-
-Attaching package: ‘plyr’
-
-The following objects are masked from ‘package:dplyr’:
-
-    arrange, count, desc, failwith, id, mutate, rename, summarise,
-    summarize
-
-The following objects are masked from ‘package:dplyr’:
-
-    arrange, count, desc, failwith, id, mutate, rename, summarise,
-    summarize
-
-The following object is masked from ‘package:purrr’:
-
-    compact
-
-The following object is masked from ‘package:purrr’:
-
-    compact
-
-
- January 2016 : Starting analysis...
- January 2016 : Reading in WUSTL raster...
- February 2016 : Starting analysis...
- February 2016 : Reading in WUSTL raster...complete.
- February 2016 : Converting WUSTL raster to points & determining county of each point...complete.
- January 2016 : Converting WUSTL raster to points & determining county of each point...complete.
- February 2016 : Computing fraction land use type in each WUSTL pixel...complete.
- January 2016 : Computing fraction land use type in each WUSTL pixel...  |                                                                              |                                                                      |   0%  |                                                                              |==============                                                        |  20%  |                                                                              |============================                                          |  40%  |                                                                              |==========================================                            |  60%  |                                                                              |========================================================              |  80%  |                                                                              |======================================================================| 100%
-complete.
- February 2016 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
-
- February 2016 : Saving results as a csv file to  data/results/201602.csv ...  |                                                                              |                                                                      |   0%  |                                                                              |==============                                                        |  20%  |                                                                              |============================                                          |  40%  |                                                                              |==========================================                            |  60%  |                                                                              |========================================================              |  80%  |                                                                              |======================================================================| 100%
-complete.
- January 2016 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
-
- January 2016 : Saving results as a csv file to  data/results/201601.csv ...
- February 2016 : COMPLETED ANALYSIS. Total time elapsed: 00:02:42 
-
- January 2016 : COMPLETED ANALYSIS. Total time elapsed: 00:02:42 

@@ -18,12 +18,12 @@
 
 #
 # Specify number of tasks for use case (example):
-#SBATCH --ntasks-per-node=12
+#SBATCH --ntasks-per-node=1
 
 #
 # Processors per task:
 
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=12
 
 #
 #Wall clock limit (10hr  here):

@@ -60,6 +60,7 @@ read_centralValley <- function(shapefilePath) {
                       "Santa Cruz","Stanislaus","Tulare","Ventura")
   
   ca_tract <- sf::read_sf(shapefilePath) %>% # Read in shapefile 
+    st_set_crs("EPSG:3857") %>% 
     dplyr::filter(NAME  %in% central_valley) %>% # Just get census tracts in the Central Valley
     dplyr::select(COUNTYFP, NAME, geometry) # Select columns of interest
   ca_tract$geometry <- sf::st_transform(ca_tract$geometry, crs=4326) # Convert geometry to 4326 CRS

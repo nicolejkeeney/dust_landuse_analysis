@@ -35,11 +35,12 @@ cat("complete.")
 
 # ------------------ Make cluster & run analysis ------------------
 
-ncores <- detectCores()
+ncores <- as.numeric(Sys.getenv('SLURM_CPUS_ON_NODE'))
+if (is.na(ncores)) { ncores <- 4 }
 outfile <- "log.txt"
 unlink(outfile)
 cl <- makeCluster(ncores, outfile=outfile)
-cat("\nMade cluster with",ncores,"cores.\nOutfile will be saved to", outfile)
+cat("\nMade cluster with", ncores,"cores.\nOutfile will be saved to", outfile)
 
 # Load desired packages into each cluster
 clusterEvalQ(cl, c(library(ncdf4),
