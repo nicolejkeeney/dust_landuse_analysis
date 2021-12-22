@@ -11,14 +11,14 @@
 #
 #Partition:
 
-#SBATCH --partition=savio
+#SBATCH --partition=savio2
 # Request one node:
 
 #SBATCH --nodes=1
 
 #
 # Specify number of tasks for use case (example):
-#SBATCH --ntasks-per-node=1
+#SBATCH --ntasks-per-node=12
 
 #
 # Processors per task:

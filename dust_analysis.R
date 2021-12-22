@@ -35,8 +35,7 @@ cat("complete.")
 
 # ------------------ Make cluster & run analysis ------------------
 
-ncores <- detectCores() - 1
-ncores <- 2
+ncores <- detectCores()
 outfile <- "log.txt"
 unlink(outfile)
 cl <- makeCluster(ncores, outfile=outfile)
