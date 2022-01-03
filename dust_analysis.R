@@ -17,30 +17,35 @@ OUTPUT_DIR <- "data/results"
 year <- 2016 # Year to run analysis for 
 months <- 1:2 # Months to run analysis for 
 
+# Create outfile for storing info about code 
+outfile <- "log.txt"
+unlink(outfile) # Remove file if it already exists 
+cat("Created outfile", outfile, file = "log.txt", append = TRUE)
+
 # Check that paths exist 
 dir.create(OUTPUT_DIR, showWarnings=FALSE)
 lapply(c(WUSTL_FOLDER, CROPSCAPE_FOLDER, SHAPEFILE_PATH, OUTPUT_DIR), check_path)
 
 # Loop through each year and perform analysis 
-cat("Starting analysis for", year,"...")
+cat("Starting analysis for", year,"...", file = "log.txt", append = TRUE)
 start.time = Sys.time()
 
 # Read in cropscape raster & shapefile 
-cat("\nReading in cropscape raster & central valley shapefile (time invariant)...")
+cat("\nReading in cropscape raster & central valley shapefile (time invariant)...", file = "log.txt", append = TRUE)
 counties <- read_centralValley(SHAPEFILE_PATH) # Read in shapefile of Central Valley counties of interest 
 cropscape_raster <- read_cropscape(CROPSCAPE_FOLDER=CROPSCAPE_FOLDER, # Read in CropScape raster
                                    year=as.character(year), 
                                    geom=counties)
-cat("complete.")
+cat("complete.", file = "log.txt", append = TRUE)
+
 
 # ------------------ Make cluster & run analysis ------------------
+help(makeCluster)
 
 ncores <- as.numeric(Sys.getenv('SLURM_CPUS_ON_NODE'))
 if (is.na(ncores)) { ncores <- 4 }
-outfile <- "log.txt"
-unlink(outfile)
 cl <- makeCluster(ncores, outfile=outfile)
-cat("\nMade cluster with", ncores,"cores.\nOutfile will be saved to", outfile)
+cat("\nMade cluster with", ncores,"cores.", file = "log.txt", append = TRUE)
 
 # Load desired packages into each cluster
 clusterEvalQ(cl, c(library(ncdf4),
