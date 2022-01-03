@@ -39,4 +39,6 @@ module load r-packages
 
 module load r-spatial
 
+module load gdal/2.2.3-netcdf
+
 R CMD BATCH dust_analysis.R
