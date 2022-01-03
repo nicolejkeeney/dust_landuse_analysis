@@ -121,8 +121,10 @@ wuslt_raster_analysis <- function(wustl_raster, counties) {
     as.data.frame
   pnts_sf <- do.call("st_sfc",c(lapply(1:nrow(wustl_df),  function(i) { # Convert each lat, lon point to sf Point object with a CRS 
     st_point(as.numeric(wustl_df[i,1:2])) 
-  }), list("crs" = 4326))) 
-  wustl_df$COUNTY <- apply(st_intersects(counties, pnts_sf, sparse = FALSE), 2, # Check which county the point intersects with 
+  }), list("crs" = 4326))) %>% 
+    st_transform(2163) # Transform to planar 
+  counties_trans <- st_transform(counties, 2163) # Transform to planar 
+  wustl_df$COUNTY <- apply(st_intersects(counties_trans, pnts_sf, sparse = FALSE), 2, # Check which county the point intersects with 
                            function(col) {counties[which(col), ]$NAME})
   df_results <- wustl_df %>% # Beautify final dataframe output 
     dplyr::rename(longitude = x, latitude = y) %>% # Rename columns to longitude, latitude 
