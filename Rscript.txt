@@ -11,19 +11,17 @@
 #
 #Partition:
 
-#SBATCH --partition=savio2
-# Request one node:
+#SBATCH --partition=savio2_htc
 
-#SBATCH --nodes=1
 
 #
 # Specify number of tasks for use case (example):
-#SBATCH --ntasks-per-node=1
+#SBATCH --ntasks-per-node=12
 
 #
 # Processors per task:
 
-#SBATCH --cpus-per-task=12
+#SBATCH --cpus-per-task=1
 
 #
 #Wall clock limit (10hr  here):
@@ -32,6 +30,8 @@
 
 #
 ##Command(s) to run:
+
+export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK'
 
 module load r
 
