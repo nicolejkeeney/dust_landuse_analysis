@@ -10,6 +10,7 @@ __pycache__/*
 
 # Anything in data folder or any netcdf file 
 data/* 
+data/*/**
 *.nc 
 */*.nc
 
