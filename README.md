@@ -1,8 +1,6 @@
 # Dust concentration trends in different land use types 
 Compute the fraction dust concentration per land use type within each pixel across coccidiomycosis endemic regions in California. Analysis is performed monthly using the monthly dust concentration rasters and yearly land use type rasters.
 
-![mean seasonal dust](data/figs/2016_dust_seasonal_av.png "August 2016 mean seasonal dust conc")
-
 
 ## Data 
 - **Monthly dust concentration**: This dataset was produced from a combined geoscience-statistical method outlined in van Donkelaar et al. (2019) and is made [publicly available on Box](https://wustl.app.box.com/s/wk3144jc6xfy6ujfvyv5m2yfk33nz2nn/folder/136086352053) from Washington University in St. Louis. 
@@ -15,9 +13,9 @@ UC Berkeley School of Public Health, Department of Environmental Health Sciences
 Email: nicolejkeeney@gmail.com<br>
 
 ## Data exploration in python
-Since I'm more familiar using python for data visualization of netcdf files, I created a Jupyter Notebook, titled `WUSTL_data_exploration.ipynb`, to explore the WUSTL dust concentration data using xarray, hvplot, cartopy, and matplotlib.For example, you can use hvplot to create an interactive visualization of each month of data. Below is a static png image of the dust concentration for the month of August. In the notebook, I also include code to generate an interactive plot that shows dust concentration for each month in 2016 (I've generated it at a lower resolution to reduce runtime). In the `data/figs` folder, you can find the interactive plot as an html file, which can be opened in your browser easily from your personal computer, along with the static png file of one month of data (displayed below), and the seasonal dust concentration means (displayed at the top of this page). 
+Since I'm more familiar using python for data visualization of netcdf files, I created a Jupyter Notebook, titled `WUSTL_data_exploration.ipynb`, to explore the WUSTL dust concentration data using xarray, hvplot, cartopy, and matplotlib.For example, you can use hvplot to create an interactive visualization of each month of data. Below is a static png image of the dust concentration for the month of August. In the notebook, I also include code to generate an interactive plot that shows dust concentration for each month in 2016 (I've generated it at a lower resolution to reduce runtime). In the `data/figs` folder, you can find the interactive plot as an html file, which can be opened in your browser easily from your personal computer, along with the static png file of one month of data, and the seasonal dust concentration means (displayed below). 
 
-![dust](data/figs/08_2016_dust.png "August WUSTL dust concentration")
+![mean seasonal dust](data/figs/2016_dust_seasonal_av.png "August 2016 mean seasonal dust conc")
 
 ### Running the notebook: conda environment
 I've included an environment file with the repository that includes all the neccessary python dependencies to run the notebook. This can be used to set up the environment on your local computer so that you have all the required dependencies needed to run the notebooks. You'll need anaconda and python installed on your computer first. <br><br> 
