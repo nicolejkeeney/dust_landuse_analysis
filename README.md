@@ -18,7 +18,7 @@ Since I'm more familiar using python for data visualization of netcdf files, I c
 ![mean seasonal dust](data/figs/2016_dust_seasonal_av.png "August 2016 mean seasonal dust conc")
 
 ### Running the notebook: conda environment
-I've included an environment file with the repository that includes all the neccessary python dependencies to run the notebook. This can be used to set up the environment on your local computer so that you have all the required dependencies needed to run the notebooks. You'll need anaconda and python installed on your computer first. <br><br> 
+I've included an environment file with the repository that includes all the neccessary python dependencies to run the notebook from your local computer. You'll need anaconda and python installed first. <br><br> 
 To create the environment, run the following in the command line: 
 ```
 conda env create -f environment.yml
