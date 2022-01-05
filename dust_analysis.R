@@ -1,3 +1,15 @@
+## Script name: dust_analysis.R
+##
+## Purpose of script: Compute the fraction dust concentration per land use type across coccidiomycosis endemic regions in California
+##
+## Date Created: 12-20-2021
+## Last Modified: n/a
+##
+## Author:Nicole Keeney
+## Email: nicolejkeeney@gmail.com
+## GitHub: nicolejkeeney
+
+
 library(tidyverse)
 library(ncdf4)
 library(raster)  
@@ -10,11 +22,11 @@ library(parallel)
 source("utils.R")
 
 
-# Set locations to data 
-WUSTL_FOLDER <- "data/SOIL" # Path to WUSTL data 
-CROPSCAPE_FOLDER <- "data/cropscape" # Path to folder containing cropscape rasters 
-SHAPEFILE_PATH <- "data/CA_Counties" # Path to counties shapefile
-OUTPUT_DIR <- "data/results"
+# Set locations to data and check that paths exits
+WUSTL_FOLDER <- "data/SOIL" %>% check_path # Path to WUSTL data 
+CROPSCAPE_FOLDER <- "data/cropscape" %>% check_path # Path to folder containing cropscape rasters 
+SHAPEFILE_PATH <- "data/CA_Counties" %>% check_path # Path to counties shapefile
+OUTPUT_DIR <- "data/results" %>% check_path
 year <- 2016 # Year to run analysis for 
 months <- 1:12 # Months to run analysis for 
 
@@ -25,7 +37,7 @@ cat("Created outfile", outfile, file = "log.txt", append = TRUE)
 
 # Check that paths exist 
 dir.create(OUTPUT_DIR, showWarnings=FALSE)
-lapply(c(WUSTL_FOLDER, CROPSCAPE_FOLDER, SHAPEFILE_PATH, OUTPUT_DIR), check_path)
+OUTPUT_DIR <- check_path(OUTPUT_DIR)
 
 # Loop through each year and perform analysis 
 cat("\nStarting analysis for", year,"...", file = "log.txt", append = TRUE)

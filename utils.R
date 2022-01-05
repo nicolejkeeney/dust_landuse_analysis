@@ -1,8 +1,20 @@
+## Script name: utils.R
+##
+## Purpose of script: Helper functions for dust analysis
+##
+## Date Created: 12-20-2021
+## Last Modified: n/a
+##
+## Author:Nicole Keeney
+## Email: nicolejkeeney@gmail.com
+## GitHub: nicolejkeeney
+
 check_path <- function(path) { 
   # Raise error if path does not exist 
   if ((length(path) == 0) || (!file.exists(path))) { 
     stop(paste0("The path ",path," does not exist")) 
-    } 
+  } 
+  else { return(path)}
 }
 
 time_elapsed_pretty <- function(start, end) {
@@ -81,7 +93,8 @@ crop_extraction_wustl_polys <- function(wustl_raster, cropscape_raster){
   crops_extracted <- exactextractr::exact_extract(cropscape_raster, # Raster data 
                                                   wustl_grid, # Polygons to extract raster to 
                                                   coverage_area=TRUE, # Get area instead of fraction
-                                                  default_value=999) # Replace NA with 999
+                                                  default_value=999, # Replace NA with 999
+                                                  progress=FALSE) # Don't show progress bar
   crop_results <- lapply(1:length(wustl_grid), FUN = function(pixel_i, extracted, wustl_polygons) { 
     cov_frac_df = get_coverage_fraction(cov_area_in_poly=extracted[[pixel_i]], poly=wustl_polygons[pixel_i,]) %>% 
       add_column(pixel_ID = pixel_i)
