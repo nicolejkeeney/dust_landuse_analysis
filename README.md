@@ -1,7 +1,7 @@
 # Dust concentration trends in different land use types 
 Compute the fraction dust concentration per land use type within each pixel across coccidiomycosis endemic regions in California. Analysis is performed monthly using the monthly dust concentration rasters and yearly land use type rasters.
 
-![dust](data/figs/08_2016_dust.png "August WUSTL dust concentration")
+![mean seasonal dust](data/figs/2016_dust_seasonal_av.png "August 2016 mean seasonal dust conc")
 
 
 ## Data 
@@ -15,7 +15,24 @@ UC Berkeley School of Public Health, Department of Environmental Health Sciences
 Email: nicolejkeeney@gmail.com<br>
 
 ## Data exploration in python
-The 
+Since I'm more familiar using python for data visualization of netcdf files, I created a Jupyter Notebook, titled `WUSTL_data_exploration.ipynb`, to explore the WUSTL dust concentration data using xarray, hvplot, cartopy, and matplotlib.For example, you can use hvplot to create an interactive visualization of each month of data. Below is a static png image of the dust concentration for the month of August. In the notebook, I also include code to generate an interactive plot that shows dust concentration for each month in 2016 (I've generated it at a lower resolution to reduce runtime). In the `data/figs` folder, you can find the interactive plot as an html file, which can be opened in your browser easily from your personal computer, along with the static png file of one month of data (displayed below), and the seasonal dust concentration means (displayed at the top of this page). 
+
+![dust](data/figs/08_2016_dust.png "August WUSTL dust concentration")
+
+### Running the notebook: conda environment
+I've included an environment file with the repository that includes all the neccessary python dependencies to run the notebook. This can be used to set up the environment on your local computer so that you have all the required dependencies needed to run the notebooks. You'll need anaconda and python installed on your computer first. <br><br> 
+To create the environment, run the following in the command line: 
+```
+conda env create -f environment.yml
+```
+To activate the environment, run the following in the command line: 
+```
+conda activate py_dust_env
+```
+To launch the Jupyter Notebook environment: 
+```
+jupyter notebook
+```
 
 ## Running the analysis in the Berkeley Savio HPC cluser 
 The main analysis script is the R script `dust_analysis.R`, which needs to be run in savio. 
