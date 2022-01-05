@@ -27,7 +27,7 @@ dir.create(OUTPUT_DIR, showWarnings=FALSE)
 lapply(c(WUSTL_FOLDER, CROPSCAPE_FOLDER, SHAPEFILE_PATH, OUTPUT_DIR), check_path)
 
 # Loop through each year and perform analysis 
-cat("Starting analysis for", year,"...", file = "log.txt", append = TRUE)
+cat("\nStarting analysis for", year,"...", file = "log.txt", append = TRUE)
 start.time = Sys.time()
 
 # Read in cropscape raster & shapefile 
@@ -48,7 +48,7 @@ cl <- makeCluster(ncores, outfile=outfile)
 cat("\nMade cluster with", ncores,"cores.", file = "log.txt", append = TRUE)
 
 # Load desired packages into each cluster
-clusterEvalQ(cl, c(library(ncdf4),
+invisible(clusterEvalQ(cl, c(library(ncdf4),
                    library(tidyverse),
                    library(raster), 
                    library(sf),      
@@ -56,7 +56,8 @@ clusterEvalQ(cl, c(library(ncdf4),
                    library(exactextractr),
                    library(plyr), 
                    library(dplyr), 
-                   source("utils.R")))
+                   source("utils.R"))))
+
 clusterExport(cl=cl, varlist=c("WUSTL_FOLDER","counties", "OUTPUT_DIR","cropscape_raster"), envir=environment())
 
 parSapply(cl, months, FUN=function(month, year, cropscape_raster, WUSTL_FOLDER, counties) { 

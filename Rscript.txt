@@ -31,7 +31,7 @@
 #
 ##Command(s) to run:
 
-export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK'
+export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 module load r
 
