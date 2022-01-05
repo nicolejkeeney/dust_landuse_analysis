@@ -9,7 +9,6 @@ library(dplyr)
 library(parallel)
 source("utils.R")
 
-sessionInfo()
 
 # Set locations to data 
 WUSTL_FOLDER <- "data/SOIL" # Path to WUSTL data 
