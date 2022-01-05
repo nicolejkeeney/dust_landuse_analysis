@@ -8,10 +8,11 @@ __pycache__/*
 .ipynb_checkpoints
 */.ipynb_checkpoints/**
 
-# Anything in data folder or any netcdf file 
+# Anything in data folder or any netcdf file. Allow results and figures. 
 data/* 
 data/*/**
 !data/results/*
+!data/figs/*
 *.nc 
 */*.nc
 
