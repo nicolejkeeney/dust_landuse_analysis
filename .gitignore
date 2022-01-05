@@ -1,5 +1,6 @@
 # Mac metadata file
 .DS_Store
+/*.DS_Store/**
 
 # Pycache 
 __pycache__/*
@@ -10,6 +11,7 @@ __pycache__/*
 
 # Anything in data folder or any netcdf file. Allow results and figures. 
 data/*
+!data/results/
 !data/figs/
 *.nc 
 */*.nc
