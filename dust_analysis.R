@@ -9,6 +9,7 @@ library(dplyr)
 library(parallel)
 source("utils.R")
 
+sessionInfo()
 
 # Set locations to data 
 WUSTL_FOLDER <- "data/SOIL" # Path to WUSTL data 
@@ -16,7 +17,7 @@ CROPSCAPE_FOLDER <- "data/cropscape" # Path to folder containing cropscape raste
 SHAPEFILE_PATH <- "data/CA_Counties" # Path to counties shapefile
 OUTPUT_DIR <- "data/results"
 year <- 2016 # Year to run analysis for 
-months <- 1:2 # Months to run analysis for 
+months <- 1:12 # Months to run analysis for 
 
 # Create outfile for storing info about code 
 outfile <- "log.txt"
