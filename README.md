@@ -1,5 +1,8 @@
 # Dust concentration trends in different land use types 
-Compute the fraction dust concentration per land use type across coccidiomycosis endemic regions in California. Analysis is performed monthly using the monthly dust concentration rasters and yearly land use type rasters.
+Compute the fraction dust concentration per land use type within each pixel across coccidiomycosis endemic regions in California. Analysis is performed monthly using the monthly dust concentration rasters and yearly land use type rasters.
+
+![dust](data/figs/08_2016_dust.png "August WUSTL dust concentration")
+
 
 ## Data 
 - **Monthly dust concentration**: This dataset was produced from a combined geoscience-statistical method outlined in van Donkelaar et al. (2019) and is made [publicly available on Box](https://wustl.app.box.com/s/wk3144jc6xfy6ujfvyv5m2yfk33nz2nn/folder/136086352053) from Washington University in St. Louis. 
@@ -11,7 +14,11 @@ Nicole Keeney<br>
 UC Berkeley School of Public Health, Department of Environmental Health Sciences<br>
 Email: nicolejkeeney@gmail.com<br>
 
-## Running the calibration script in the Berkeley Savio HPC cluser 
+## Data exploration in python
+The 
+
+## Running the analysis in the Berkeley Savio HPC cluser 
+The main analysis script is the R script `dust_analysis.R`, which needs to be run in savio. 
 
 ### 1) Log into savio using your username 
  1) Run `ssh nicolekeeney@hpc.brc.berkeley.edu` in your terminal to log in to savio, replacing nicolekeeney with your savio username
