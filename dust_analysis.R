@@ -10,6 +10,8 @@
 ## GitHub: nicolejkeeney
 
 
+# ------------------ Dependencies ------------------
+
 library(tidyverse)
 library(ncdf4)
 library(raster)  
@@ -19,45 +21,52 @@ library(exactextractr)
 library(plyr)
 library(dplyr)
 library(parallel)
-source("utils.R")
+source("utils.R") # Helper functions
 
+# ------------------ USER INPUTS ------------------
+
+year <- 2016 # Year to run analysis for 
+months <- 1:12 # Months to run analysis for 
+
+
+# ------------------ Define filepaths, create outfile & output directory  ------------------
 
 # Set locations to data and check that paths exits
 WUSTL_FOLDER <- "data/SOIL" %>% check_path # Path to WUSTL data 
 CROPSCAPE_FOLDER <- "data/cropscape" %>% check_path # Path to folder containing cropscape rasters 
 SHAPEFILE_PATH <- "data/CA_Counties" %>% check_path # Path to counties shapefile
 OUTPUT_DIR <- "data/results" %>% check_path
-year <- 2016 # Year to run analysis for 
-months <- 1:12 # Months to run analysis for 
 
 # Create outfile for storing info about code 
 outfile <- "log.txt"
 unlink(outfile) # Remove file if it already exists 
-cat("Created outfile", outfile, file = "log.txt", append = TRUE)
+cat("Created outfile", outfile, file = outfile, append = TRUE)
 
-# Check that paths exist 
+# Create output directory 
 dir.create(OUTPUT_DIR, showWarnings=FALSE)
-OUTPUT_DIR <- check_path(OUTPUT_DIR)
+OUTPUT_DIR <- check_path(OUTPUT_DIR) # Check that path exists
 
-# Loop through each year and perform analysis 
-cat("\nStarting analysis for", year,"...", file = "log.txt", append = TRUE)
+# Start timer
+cat("\nPerforming analysis for", year,"...", file = outfile, append = TRUE)
 start.time = Sys.time()
 
+# ------------------ Read in cropscape raster & CA counties shapefile ------------------
+
 # Read in cropscape raster & shapefile 
-cat("\nReading in cropscape raster & central valley shapefile (time invariant)...", file = "log.txt", append = TRUE)
+cat("\nReading in cropscape raster & central valley shapefile (time invariant)...", file = outfile, append = TRUE)
 counties <- read_centralValley(SHAPEFILE_PATH) # Read in shapefile of Central Valley counties of interest 
 cropscape_raster <- read_cropscape(CROPSCAPE_FOLDER=CROPSCAPE_FOLDER, # Read in CropScape raster
                                    year=as.character(year), 
                                    geom=counties)
-cat("complete.\n", file = "log.txt", append = TRUE)
+cat("complete.\n", file = outfile, append = TRUE)
 
+# ------------------ Set up cluster ------------------
 
-# ------------------ Make cluster & run analysis ------------------
-
-ncores <- as.numeric(Sys.getenv('SLURM_CPUS_ON_NODE'))
-if (is.na(ncores)) { ncores <- 4 }
-cl <- makeCluster(ncores, outfile=outfile)
-cat("\nMade cluster with", ncores,"cores.", file = "log.txt", append = TRUE)
+# Make cluster 
+ncores <- as.numeric(Sys.getenv('SLURM_CPUS_ON_NODE')) # Detect number of cores. This should be set in Rscript.txt if running in savio 
+if (is.na(ncores)) { ncores <- 4 } # Set to 4 cores if no SLURM_CPUS_ON_NODE environment variable detected (i.e running on personal laptop)
+cl <- makeCluster(ncores, outfile=outfile) # Make cluster using outfile defined earlier
+cat("\nMade cluster with", ncores,"cores.", file = outfile, append = TRUE)
 
 # Load desired packages into each cluster
 invisible(clusterEvalQ(cl, c(library(ncdf4),
@@ -70,8 +79,13 @@ invisible(clusterEvalQ(cl, c(library(ncdf4),
                    library(dplyr), 
                    source("utils.R"))))
 
+# Export time-invariant variables to each cluster 
 clusterExport(cl=cl, varlist=c("WUSTL_FOLDER","counties", "OUTPUT_DIR","cropscape_raster"), envir=environment())
 
+
+# ------------------ PARALLELIZED ANALYSIS ------------------
+
+# Analysis is performed for each month in parallel using parSapply from R parallel package 
 parSapply(cl, months, FUN=function(month, year, cropscape_raster, WUSTL_FOLDER, counties) { 
   
   start.time.month = Sys.time()
@@ -80,6 +94,7 @@ parSapply(cl, months, FUN=function(month, year, cropscape_raster, WUSTL_FOLDER, 
   cat("\n", format(date,"%B %Y"),": Starting analysis...")
   
   # ------------------ Read in WUSTL raster ------------------
+  
   cat("\n", format(date,"%B %Y"),": Reading in WUSTL raster...")
   wustl_raster <- read_wustl(WUSTL_FOLDER=WUSTL_FOLDER, 
                              year=as.character(year), 
@@ -115,6 +130,9 @@ parSapply(cl, months, FUN=function(month, year, cropscape_raster, WUSTL_FOLDER, 
   cat("\n", format(date,"%B %Y"),": COMPLETED ANALYSIS. Total time elapsed:", time_elapsed_pretty(start.time.month, Sys.time()), "\n")
   
 }, year=year, cropscape_raster=cropscape_raster, WUSTL_FOLDER=WUSTL_FOLDER, counties=counties)
+
+
+# ------------------ End of script. Stop cluster ------------------
 
 cat("Completed analysis for", year, "\nTotal time elapsed:", time_elapsed_pretty(start.time, Sys.time()))
 stopCluster(cl)

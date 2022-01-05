@@ -9,7 +9,8 @@
 ## Email: nicolejkeeney@gmail.com
 ## GitHub: nicolejkeeney
 
-source("utils.R")
+# Dependencies 
+source("utils.R") # For checking that path exists 
 
 # User inputs
 DATA_DIR <- "data/results/" 

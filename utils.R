@@ -14,7 +14,7 @@ check_path <- function(path) {
   if ((length(path) == 0) || (!file.exists(path))) { 
     stop(paste0("The path ",path," does not exist")) 
   } 
-  else { return(path)}
+  else { return(path) }
 }
 
 time_elapsed_pretty <- function(start, end) {
