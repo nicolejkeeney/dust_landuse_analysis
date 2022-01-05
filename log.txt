@@ -218,4 +218,63 @@ The following object is masked from ‘package:purrr’:
  October 2016 : Computing fraction land use type in each WUSTL pixel...complete.
  January 2016 : Computing fraction land use type in each WUSTL pixel...complete.
  April 2016 : Computing fraction land use type in each WUSTL pixel...complete.
- July 2016 : Computing fraction land use type in each WUSTL pixel...
+ July 2016 : Computing fraction land use type in each WUSTL pixel...complete.
+ July 2016 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+complete.
+ October 2016 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ July 2016 : Saving results as a csv file to  data/results/201607.csv ...complete.
+ January 2016 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+complete.
+ April 2016 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ October 2016 : Saving results as a csv file to  data/results/201610.csv ...
+ January 2016 : Saving results as a csv file to  data/results/201601.csv ...
+ April 2016 : Saving results as a csv file to  data/results/201604.csv ...
+ July 2016 : COMPLETED ANALYSIS. Total time elapsed: 00:37:04 
+
+ August 2016 : Starting analysis...
+ August 2016 : Reading in WUSTL raster...
+ October 2016 : COMPLETED ANALYSIS. Total time elapsed: 00:37:04 
+
+ November 2016 : Starting analysis...
+ November 2016 : Reading in WUSTL raster...
+ January 2016 : COMPLETED ANALYSIS. Total time elapsed: 00:37:04 
+
+ February 2016 : Starting analysis...
+ February 2016 : Reading in WUSTL raster...
+ April 2016 : COMPLETED ANALYSIS. Total time elapsed: 00:37:05 
+
+ May 2016 : Starting analysis...
+ May 2016 : Reading in WUSTL raster...complete.
+ August 2016 : Converting WUSTL raster to points & determining county of each point...complete.
+ November 2016 : Converting WUSTL raster to points & determining county of each point...complete.
+ February 2016 : Converting WUSTL raster to points & determining county of each point...complete.
+ May 2016 : Converting WUSTL raster to points & determining county of each point...complete.
+ February 2016 : Computing fraction land use type in each WUSTL pixel...complete.
+ November 2016 : Computing fraction land use type in each WUSTL pixel...complete.
+ August 2016 : Computing fraction land use type in each WUSTL pixel...complete.
+ May 2016 : Computing fraction land use type in each WUSTL pixel...Error in serialize(data, node$con) : ignoring SIGPIPE signal
+Calls: <Anonymous> ... doTryCatch -> sendData -> sendData.SOCKnode -> serialize
+In addition: Warning message:
+In file(fn, "rb") :
+  cannot open file '/private/var/folders/8v/cr06mz0n3bjd5jr12_9v6n200000gn/T/Rtmpxfcu56/raster/r_tmp_2022-01-05_114919_11944_02456.gri': No such file or directory
+Execution halted
+Error in unserialize(node$con) : error reading from connection
+Calls: <Anonymous> ... doTryCatch -> recvData -> recvData.SOCKnode -> unserialize
+In addition: Warning message:
+In file(fn, "rb") :
+  cannot open file '/private/var/folders/8v/cr06mz0n3bjd5jr12_9v6n200000gn/T/Rtmpxfcu56/raster/r_tmp_2022-01-05_114919_11944_02456.gri': No such file or directory
+Execution halted
+Error in unserialize(node$con) : error reading from connection
+Calls: <Anonymous> ... doTryCatch -> recvData -> recvData.SOCKnode -> unserialize
+In addition: Warning message:
+In file(fn, "rb") :
+  cannot open file '/private/var/folders/8v/cr06mz0n3bjd5jr12_9v6n200000gn/T/Rtmpxfcu56/raster/r_tmp_2022-01-05_114919_11944_02456.gri': No such file or directory
+Execution halted
+Error in unserialize(node$con) : error reading from connection
+Calls: <Anonymous> ... doTryCatch -> recvData -> recvData.SOCKnode -> unserialize
+In addition: Warning message:
+In file(fn, "rb") :
+  cannot open file '/private/var/folders/8v/cr06mz0n3bjd5jr12_9v6n200000gn/T/Rtmpxfcu56/raster/r_tmp_2022-01-05_114919_11944_02456.gri': No such file or directory
+Execution halted
