@@ -75,12 +75,10 @@ crop_extraction_wustl_polys <- function(wustl_raster, cropscape_raster){
   
   wustl_grid <- rasterToPolygons(wustl_raster, n=4) # Convert to polygons 
   
-  # FOR TESTING ONLY. 
-  # DELETE THIS LINE WHEN PERFORMING FULL ANALYSIS
-  wustl_grid <- wustl_grid[1:5,]
+  # wustl_grid <- wustl_grid[1:5,] # FOR TESTING ONLY. 
   
   # Get coverage area by polygon 
-  crops_extracted <- exactextractr::exact_extract(crop(cropscape_raster, wustl_grid), # Raster data 
+  crops_extracted <- exactextractr::exact_extract(cropscape_raster, # Raster data 
                                                   wustl_grid, # Polygons to extract raster to 
                                                   coverage_area=TRUE, # Get area instead of fraction
                                                   default_value=999) # Replace NA with 999

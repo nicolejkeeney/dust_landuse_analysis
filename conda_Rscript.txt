@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#!/bin/bash
+# Job name:
+#SBATCH --job-name=dust_analysis
+#
+#Account:
+
+#SBATCH --account=fc_envids
+
+#
+#Partition:
+
+#SBATCH --partition=savio2_htc
+
+
+#
+# Specify number of tasks for use case (example):
+#SBATCH --ntasks-per-node=12
+
+#
+# Processors per task:
+
+#SBATCH --cpus-per-task=1
+
+#
+#Wall clock limit (10hr  here):
+
+#SBATCH --time=20:00:00
+
+#
+##Command(s) to run:
+
+export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+
+
+source activate dust_r_env 
+
+R CMD BATCH dust_analysis.R
