@@ -1,5 +1,5 @@
 # Dust concentration trends in different land use types 
-Compute the fraction dust concentration per land use type within each pixel across coccidiomycosis endemic regions in California. Analysis is performed monthly using the monthly dust concentration rasters and yearly land use type rasters.
+Compute the fraction dust concentration per land use type within each pixel across coccidiomycosis endemic regions in California. The computation is performed monthly using the monthly dust concentration rasters and yearly land use type rasters. Analysis is performed in R; see the script `dust_analysis.R` and it's associated helper functions in `utils.R` for more details on the code. 
 
 
 ## Data 
