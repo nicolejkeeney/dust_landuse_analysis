@@ -9,6 +9,7 @@ library(dplyr)
 library(parallel)
 source("utils.R")
 
+
 # Set locations to data 
 WUSTL_FOLDER <- "data/SOIL" # Path to WUSTL data 
 CROPSCAPE_FOLDER <- "data/cropscape" # Path to folder containing cropscape rasters 
@@ -36,11 +37,10 @@ counties <- read_centralValley(SHAPEFILE_PATH) # Read in shapefile of Central Va
 cropscape_raster <- read_cropscape(CROPSCAPE_FOLDER=CROPSCAPE_FOLDER, # Read in CropScape raster
                                    year=as.character(year), 
                                    geom=counties)
-cat("complete.", file = "log.txt", append = TRUE)
+cat("complete.\n", file = "log.txt", append = TRUE)
 
 
 # ------------------ Make cluster & run analysis ------------------
-help(makeCluster)
 
 ncores <- as.numeric(Sys.getenv('SLURM_CPUS_ON_NODE'))
 if (is.na(ncores)) { ncores <- 4 }
