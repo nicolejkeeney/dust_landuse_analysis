@@ -1,5 +1,5 @@
 # Dust concentration trends in different land use types 
-Compute the fraction dust concentration per land use type within each pixel across coccidiomycosis endemic regions in California. The computation is performed monthly using the monthly dust concentration rasters and yearly land use type rasters. Analysis is performed in R; see the script `dust_analysis.R` and it's associated helper functions in `utils.R` for more details on the code. 
+We obtained monthly averaged dust concentration estimates derived from method utilizing chemical transport model output, satellite data, and air particulate ground monitors, as detailed in van Donkelaar et al. (2019). Using yearly rasters of land cover provided by the USDA's CropScape Cropland Data Layers, we compute the fractional coverage of each land cover type per pixel in the 0.01° x 0.01° native grid of the dust concentration dataset, restricted to the endemic counties. Within each pixel, we also extract the latitude and longitude coordinate defining the center of the pixel, as well as the county in which that central coordinate lies. Analysis is performed in R; see the script `dust_analysis.R` and it's associated helper functions in `utils.R` for more details on the code. 
 
 ## Contact 
 Nicole Keeney<br>
