@@ -2,7 +2,7 @@
 
 #!/bin/bash
 # Job name:
-#SBATCH --job-name=dust_analysis
+#SBATCH --job-name=2015_analysis
 #
 #Account:
 

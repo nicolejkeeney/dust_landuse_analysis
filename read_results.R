@@ -13,13 +13,13 @@
 source("utils.R") # For checking that path exists 
 
 # User inputs
-DATA_DIR <- "data/results/" 
 year <- 2016 # Year of interest as integer value
 month <- 3 # Month of interest as integer value (i.e 3 for March)
 
 # Get date from year month and get filepath 
 date <- paste0(as.character(year),"-", as.character(month),"-01") %>%  # Get year-mon 
   as.Date("%Y-%m-%d")
+DATA_DIR <- paste("data/results", as.character(year), "/", sep="/")
 FILEPATH <- paste0(DATA_DIR,format(date,"%Y%m"),".csv") %>% check_path # Define filepath and check that it exists 
 
 # Read in dataframe

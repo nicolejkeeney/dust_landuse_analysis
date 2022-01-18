@@ -3,7 +3,8 @@
 ## Purpose of script: Compute the fraction dust concentration per land use type across coccidiomycosis endemic regions in California
 ##
 ## Date Created: 12-20-2021
-## Last Modified: n/a
+## Last Modified: 
+##    - Added flexibility for using script for multiple years (01-18-2022)
 ##
 ## Author:Nicole Keeney
 ## Email: nicolejkeeney@gmail.com
@@ -25,17 +26,16 @@ source("utils.R") # Helper functions
 
 # ------------------ USER INPUTS ------------------
 
-year <- 2016 # Year to run analysis for 
+year <- 2015 # Year to run analysis for 
 months <- 1:12 # Months to run analysis for 
-
 
 # ------------------ Define filepaths, create outfile & output directory  ------------------
 
 # Set locations to data and check that paths exits
-WUSTL_FOLDER <- "data/SOIL" %>% check_path # Path to WUSTL data 
+WUSTL_FOLDER <- paste("data/SOIL", as.character(year), sep="/") %>% check_path # Path to WUSTL data 
 CROPSCAPE_FOLDER <- "data/cropscape" %>% check_path # Path to folder containing cropscape rasters 
 SHAPEFILE_PATH <- "data/CA_Counties" %>% check_path # Path to counties shapefile
-OUTPUT_DIR <- "data/results" %>% check_path
+OUTPUT_DIR <- paste("data/results", as.character(year), sep="/") # Where to save csv results 
 
 # Create outfile for storing info about code 
 outfile <- "log.txt"
@@ -123,7 +123,7 @@ parSapply(cl, months, FUN=function(month, year, cropscape_raster, WUSTL_FOLDER, 
     dplyr::rename("dust(ug/m3)" = SOIL) # Rename column
   
   # Save data frame as csv 
-  output_filepath = paste0(OUTPUT_DIR,"/",format(date, "%Y%m"),".csv")
+  output_filepath = paste0(OUTPUT_DIR,"/", format(date, "%Y%m"),".csv")
   cat("\n", format(date,"%B %Y"),": Saving results as a csv file to ", output_filepath, "...")
   write.csv(results_all, output_filepath, row.names=FALSE)
   
