@@ -26,7 +26,7 @@
 #
 #Wall clock limit (10hr  here):
 
-#SBATCH --time=20:00:00
+#SBATCH --time=01:00:00
 
 #
 ##Command(s) to run:
@@ -41,4 +41,4 @@ module load r-spatial
 
 module load gdal/2.2.3-netcdf
 
-R CMD BATCH dust_analysis.R
+R CMD BATCH dust_analysis.R 2015
