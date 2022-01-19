@@ -26,8 +26,16 @@ source("utils.R") # Helper functions
 
 # ------------------ USER INPUTS ------------------
 
-year <- 2015 # Year to run analysis for 
+
+year <- commandArgs(trailingOnly = TRUE) # Input year from BASH file (see Rscript.txt)
+if (length(year) == 0) { # This condition is TRUE if running code interactively in RStudio 
+    year <- 2015 # Default year 
+} else { 
+  year <- as.integer(year) # Convert string input to year 
+}
+
 months <- 1:12 # Months to run analysis for 
+
 
 # ------------------ Define filepaths, create outfile & output directory  ------------------
 
