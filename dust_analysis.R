@@ -27,15 +27,13 @@ source("utils.R") # Helper functions
 # ------------------ USER INPUTS ------------------
 
 
-input_args <- (commandArgs(TRUE)) # Input year from BASH file (see Rscript.txt)
-if (length(input_args) == 0) { # This condition is TRUE if running code interactively in RStudio 
+args <- (commandArgs(TRUE)) # Input year from BASH file (see Rscript.txt)
+if (length(args) == 0) { # This condition is TRUE if running code interactively in RStudio 
   # Supply default value for year  
   year <- 2015
 } else { 
-  for(i in 1:length(input_args)){
-    eval(parse(text=input_args[[i]])) 
-  }
-  year <- as.integer(year) # Convert string input to year 
+  year <- eval( parse(text=args[1]) )
+  year <- as.integer(year) # Convert string input to year  
 }
 
 months <- 1:12 # Months to run analysis for 
