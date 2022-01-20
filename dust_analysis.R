@@ -51,8 +51,7 @@ if (file.exists(outfile)) { unlink(outfile) } # Remove file if it already exists
 cat("Created outfile", outfile, file = outfile, append = TRUE)
 
 # Create output directory 
-dir.create(OUTPUT_DIR, showWarnings=FALSE)
-OUTPUT_DIR <- check_path(OUTPUT_DIR) # Check that path exists
+dir.create(OUTPUT_DIR, showWarnings = FALSE, recursive = TRUE)
 
 # Start timer
 cat("\nPerforming analysis for", year,"...", file = outfile, append = TRUE)
