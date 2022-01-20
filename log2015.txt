@@ -214,4 +214,31 @@ The following object is masked from ‘package:purrr’:
  October 2015 : Converting WUSTL raster to points & determining county of each point...complete.
  July 2015 : Converting WUSTL raster to points & determining county of each point...complete.
  April 2015 : Converting WUSTL raster to points & determining county of each point...complete.
- January 2015 : Converting WUSTL raster to points & determining county of each point...
+ January 2015 : Converting WUSTL raster to points & determining county of each point...complete.
+ April 2015 : Computing fraction land use type in each WUSTL pixel...complete.
+ October 2015 : Computing fraction land use type in each WUSTL pixel...complete.
+ July 2015 : Computing fraction land use type in each WUSTL pixel...complete.
+ January 2015 : Computing fraction land use type in each WUSTL pixel...Error in serialize(data, node$con) : ignoring SIGPIPE signal
+Calls: <Anonymous> ... doTryCatch -> sendData -> sendData.SOCKnode -> serialize
+In addition: Warning message:
+In file(fn, "rb") :
+  cannot open file '/private/var/folders/8v/cr06mz0n3bjd5jr12_9v6n200000gn/T/RtmphSkfpI/raster/r_tmp_2022-01-19_164403_23614_02456.gri': No such file or directory
+Execution halted
+Error in unserialize(node$con) : error reading from connection
+Calls: <Anonymous> ... doTryCatch -> recvData -> recvData.SOCKnode -> unserialize
+In addition: Warning message:
+In file(fn, "rb") :
+  cannot open file '/private/var/folders/8v/cr06mz0n3bjd5jr12_9v6n200000gn/T/RtmphSkfpI/raster/r_tmp_2022-01-19_164403_23614_02456.gri': No such file or directory
+Execution halted
+Error in unserialize(node$con) : error reading from connection
+Calls: <Anonymous> ... doTryCatch -> recvData -> recvData.SOCKnode -> unserialize
+In addition: Warning message:
+In file(fn, "rb") :
+  cannot open file '/private/var/folders/8v/cr06mz0n3bjd5jr12_9v6n200000gn/T/RtmphSkfpI/raster/r_tmp_2022-01-19_164403_23614_02456.gri': No such file or directory
+Execution halted
+Error in unserialize(node$con) : error reading from connection
+Calls: <Anonymous> ... doTryCatch -> recvData -> recvData.SOCKnode -> unserialize
+In addition: Warning message:
+In file(fn, "rb") :
+  cannot open file '/private/var/folders/8v/cr06mz0n3bjd5jr12_9v6n200000gn/T/RtmphSkfpI/raster/r_tmp_2022-01-19_164403_23614_02456.gri': No such file or directory
+Execution halted

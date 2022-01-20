@@ -47,7 +47,7 @@ OUTPUT_DIR <- paste("data/results", as.character(year), sep="/") # Where to save
 
 # Create outfile for storing info about code 
 outfile <- paste0(as.character(year), "_log", ".txt")
-unlink(outfile) # Remove file if it already exists 
+if (file.exists(outfile)) { unlink(outfile) } # Remove file if it already exists 
 cat("Created outfile", outfile, file = outfile, append = TRUE)
 
 # Create output directory 
