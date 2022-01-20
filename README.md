@@ -44,7 +44,7 @@ The main analysis script is the R script `dust_analysis.R`, which needs to be ru
 **NOTES**: I ran into some errors were related to the default package versions for r-spatial in Savio. Make sure the versions of the raster and exact_extract packages are updated to avoid any errors or conflicts! 
 
 ### 1) Log into savio using your username 
- 1) Run `ssh nicolekeeney@hpc.brc.berkeley.edu` in your terminal to log in to savio, replacing nicolekeeney with your savio username
+ 1) Run `ssh nicolekeeney@hpc.brc.berkeley.edu` in your terminal to log in to savio, replacing `nicolekeeney` with your savio username
 
 ### 2) Clone the github repository to savio
  1) Follow the instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate a personal access token attached to your GitHub account. This will be a collection of random letters/numbers that you'll need to copy. You'll also need to decide what permissions to give the key; I checked most boxes, except the ability to delete the repo 
