@@ -39,9 +39,9 @@ jupyter notebook
 ```
 
 ## Running the analysis in the Berkeley Savio HPC cluser 
-The main analysis script is the R script `dust_analysis.R`, which needs to be run in savio. 
+The main analysis script is the R script `dust_analysis.R`, which needs to be run in an HPC cluster. Our research group has access to Berkeley's [Savio](https://research-it.berkeley.edu/services-projects/high-performance-computing-savio) cluster, which is where I ran this analysis. 
 
-**NOTES**: I ran into some errors were related to the default package versions for r-spatial in savio. Make sure the versions of the raster and exact_extract packages are updated to avoid any errors or conflicts! 
+**NOTES**: I ran into some errors were related to the default package versions for r-spatial in Savio. Make sure the versions of the raster and exact_extract packages are updated to avoid any errors or conflicts! 
 
 ### 1) Log into savio using your username 
  1) Run `ssh nicolekeeney@hpc.brc.berkeley.edu` in your terminal to log in to savio, replacing nicolekeeney with your savio username
