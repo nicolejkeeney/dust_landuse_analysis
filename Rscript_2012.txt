@@ -41,4 +41,4 @@ module load r-spatial
 
 module load gdal/2.2.3-netcdf
 
-R CMD BATCH --no-save --no-restore '--args year=2012' dust_analysis.R
+R CMD BATCH '--args year=2012' dust_analysis.R
