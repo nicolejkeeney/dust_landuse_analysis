@@ -27,7 +27,7 @@ source("utils.R") # Helper functions
 # ------------------ USER INPUTS ------------------
 
 
-year <- commandArgs(trailingOnly = TRUE) # Input year from BASH file (see Rscript.txt)
+year <- commandArgs(trailingOnly = FALSE) # Input year from BASH file (see Rscript.txt)
 if (length(year) == 0) { # This condition is TRUE if running code interactively in RStudio 
     year <- 2015 # Default year 
 } else { 
