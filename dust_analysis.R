@@ -46,7 +46,7 @@ SHAPEFILE_PATH <- "data/CA_Counties" %>% check_path # Path to counties shapefile
 OUTPUT_DIR <- paste("data/results", as.character(year), sep="/") # Where to save csv results 
 
 # Create outfile for storing info about code 
-outfile <- "log.txt"
+outfile <- paste0(as.character(year), "_log", ".txt")
 unlink(outfile) # Remove file if it already exists 
 cat("Created outfile", outfile, file = outfile, append = TRUE)
 
