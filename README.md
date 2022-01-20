@@ -52,6 +52,9 @@ The main analysis script is the R script `dust_analysis.R`, which needs to be ru
  3) After that, you'll be prompted to enter your GitHub username and a password. For the password, **input the personal access token, not your GitHub password.** 
  4) Cache your personal access token so you don't have to keep inputting it each time following the instructions. I've set it up using HTTPS, not SSH. Run `gh auth login` and input your username and personal access key 
 ### 3) Run the calibration script 
- 1) Edit the `dust_analysis.R` script with the year you want to run the analysis for. Do this by changing the variable `year` at the top of the script under **--- USER INPUTS--**. You can also edit the months you want to run the analysis for; the default is `months <- 1:12` to perform the analysis for all 12 months in the year). 
- 2) In terminal, from the repo directory, run `sbatch Rscript.txt`.
- 3) If you want, check the job status using `squeue -u nicolekeeney`, replacing nicolekeeney with your savio username. 
+The analysis script `dust_analysis.R` gets run through the cluster through a slurm job script, where you can set some parameters for the job. The main parameter is the year for which you want to run the analysis, which is read into the script as an argument. This argument is set in the job script, a text file named for `year_Rscript.txt`., where `year` is the year you want to run the script for. 
+ 1) To send off the job, run in the terminal `sbatch year_Rscript.txt`, replacing `year` with the year of interest (i.e. `2012_Rscript.txt` for 2012)
+ 2) If you want, check the job status using `squeue -u nicolekeeney`, replacing nicolekeeney with your savio username. 
+ 3) The output of the script is saved in `year_log.txt1`. I've set up this outfile to record steps in the analysis process as the script is run, allowing for easier debugging. 
+### 4) Access the results 
+The results are saved in `data/results/year`, where `year` is the year that you ran the analysis for. I used [Globus](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/data/transferring-data/using-globus-connect-savio/) to transfer the results to my personal computer.
