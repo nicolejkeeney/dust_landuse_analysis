@@ -32,8 +32,8 @@ if (length(input_args) == 0) { # This condition is TRUE if running code interact
   # Supply default value for year  
   year <- 2015
 } else { 
-  for(i in 1:length(args)){
-    eval(parse(text=args[[i]])) 
+  for(i in 1:length(input_args)){
+    eval(parse(text=input_args[[i]])) 
   }
   year <- as.integer(year) # Convert string input to year 
 }
