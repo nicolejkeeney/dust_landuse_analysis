@@ -39,9 +39,9 @@ jupyter notebook
 ```
 
 ## Running the analysis in the Berkeley Savio HPC cluser 
-The main analysis script is the R script `dust_analysis.R`, which needs to be run in savio. 
+The main analysis script is the R script `dust_analysis.R`, which needs to be run in an HPC cluster. Our research group has access to Berkeley's [Savio](https://research-it.berkeley.edu/services-projects/high-performance-computing-savio) cluster, which is where I ran this analysis. 
 
-**NOTES**: I ran into some errors were related to the default package versions for r-spatial in savio. Make sure the versions of the raster and exact_extract packages are updated to avoid any errors or conflicts! 
+**NOTES**: I ran into some errors were related to the default package versions for r-spatial in Savio. Make sure the versions of the raster and exact_extract packages are updated to avoid any errors or conflicts! 
 
 ### 1) Log into savio using your username 
  1) Run `ssh nicolekeeney@hpc.brc.berkeley.edu` in your terminal to log in to savio, replacing nicolekeeney with your savio username
@@ -54,7 +54,7 @@ The main analysis script is the R script `dust_analysis.R`, which needs to be ru
 ### 3) Run the calibration script 
 The analysis script `dust_analysis.R` gets run through the cluster through a slurm job script, where you can set some parameters for the job. The main parameter is the year for which you want to run the analysis, which is read into the script as an argument. This argument is set in the job script, a text file named for `year_Rscript.txt`., where `year` is the year you want to run the script for. 
  1) To send off the job, run in the terminal `sbatch year_Rscript.txt`, replacing `year` with the year of interest (i.e. `2012_Rscript.txt` for 2012)
- 2) If you want, check the job status using `squeue -u nicolekeeney`, replacing nicolekeeney with your savio username. 
+ 2) If you want, check the job status using `squeue -u nicolekeeney`, replacing `nicolekeeney` with your savio username. 
  3) The output of the script is saved in `year_log.txt1`. I've set up this outfile to record steps in the analysis process as the script is run, allowing for easier debugging. 
 ### 4) Access the results 
 The results are saved in `data/results/year`, where `year` is the year that you ran the analysis for. I used [Globus](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/data/transferring-data/using-globus-connect-savio/) to transfer the results to my personal computer.
