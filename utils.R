@@ -35,7 +35,7 @@ read_cropscape <- function(CROPSCAPE_FOLDER, year, geom) {
   # year (char): year to grab data for 
   # geom (sf): geometry to crop raster to
   
-  wildcard <- paste0(CROPSCAPE_FOLDER ,"/*", year,"*/*",year,"*.tif")
+  wildcard <- paste0(CROPSCAPE_FOLDER ,"/*", year,"_clip_*/*",year,"_clip_*.tif")
   filepath <- Sys.glob(wildcard) # Get file path
   if (length(filepath) == 0) { stop(paste0("File with wildcard ",wildcard," does not exist")) } # Raise error if file doesn't exist
   
