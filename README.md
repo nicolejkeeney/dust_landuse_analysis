@@ -44,7 +44,7 @@ The main analysis script is the R script `dust_analysis.R`, which needs to be ru
 **NOTES**: I ran into some errors were related to the default package versions for r-spatial in Savio. Make sure the versions of the raster and exact_extract packages are updated to avoid any errors or conflicts! 
 
 ### 1) Log into savio using your username 
- 1) Run `ssh nicolekeeney@hpc.brc.berkeley.edu` in your terminal to log in to savio, replacing nicolekeeney with your savio username
+ 1) Run `ssh nicolekeeney@hpc.brc.berkeley.edu` in your terminal to log in to savio, replacing `nicolekeeney` with your savio username
 
 ### 2) Clone the github repository to savio
  1) Follow the instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate a personal access token attached to your GitHub account. This will be a collection of random letters/numbers that you'll need to copy. You'll also need to decide what permissions to give the key; I checked most boxes, except the ability to delete the repo 
@@ -52,9 +52,9 @@ The main analysis script is the R script `dust_analysis.R`, which needs to be ru
  3) After that, you'll be prompted to enter your GitHub username and a password. For the password, **input the personal access token, not your GitHub password.** 
  4) Cache your personal access token so you don't have to keep inputting it each time following the instructions. I've set it up using HTTPS, not SSH. Run `gh auth login` and input your username and personal access key 
 ### 3) Run the calibration script 
-The analysis script `dust_analysis.R` gets run through the cluster through a slurm job script, where you can set some parameters for the job. The main parameter is the year for which you want to run the analysis, which is read into the script as an argument. This argument is set in the job script, a text file named for `year_Rscript.txt`., where `year` is the year you want to run the script for. 
+The analysis script `dust_analysis.R` gets run through the cluster through a slurm job script, where you can set some parameters for the job. The main parameter is the year for which you want to run the analysis, which is read into the script as an argument. This argument is set in the job script, a text file named for `year_Rscript.txt`., where `year` is the year you want to run the script for. You'll need to edit this textfile if you want to run the analysis for any years that I have't included a job script for, changing the arguments by editting the line `--args year` at the bottom of the file. 
  1) To send off the job, run in the terminal `sbatch year_Rscript.txt`, replacing `year` with the year of interest (i.e. `2012_Rscript.txt` for 2012)
  2) If you want, check the job status using `squeue -u nicolekeeney`, replacing `nicolekeeney` with your savio username. 
- 3) The output of the script is saved in `year_log.txt1`. I've set up this outfile to record steps in the analysis process as the script is run, allowing for easier debugging. 
+ 3) The output of the script is saved in `year_log.txt`. I've set up this outfile to record steps in the analysis process as the script is run, allowing for easier debugging. 
 ### 4) Access the results 
 The results are saved in `data/results/year`, where `year` is the year that you ran the analysis for. I used [Globus](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/data/transferring-data/using-globus-connect-savio/) to transfer the results to my personal computer.
