@@ -9,11 +9,7 @@ __pycache__/*
 .ipynb_checkpoints
 */.ipynb_checkpoints/**
 
-# Anything in data folder or any netcdf file. Allow figures
-data/*
-!data/*/.gitkeep
-!data/figs/
-!cal_cities_lat_long.csv
+# Don't add any netcdf files!
 *.nc 
 */*.nc
 
