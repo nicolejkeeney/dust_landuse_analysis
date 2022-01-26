@@ -24,8 +24,8 @@ library(dplyr)
 library(parallel)
 source("utils.R") # Helper functions
 
-# ------------------ USER INPUTS ------------------
 
+# ------------------ USER INPUTS ------------------
 
 args <- (commandArgs(TRUE)) # Input year from BASH file (see Rscript.txt)
 if (length(args) == 0) { # This condition is TRUE if running code interactively in RStudio 
@@ -58,6 +58,7 @@ dir.create(OUTPUT_DIR, showWarnings = FALSE, recursive = TRUE)
 cat("\nPerforming analysis for", year,"...", file = outfile, append = TRUE)
 start.time = Sys.time()
 
+
 # ------------------ Read in cropscape raster & CA counties shapefile ------------------
 
 # Read in cropscape raster & shapefile 
@@ -67,6 +68,7 @@ cropscape_raster <- read_cropscape(CROPSCAPE_FOLDER=CROPSCAPE_FOLDER, # Read in 
                                    year=as.character(year), 
                                    geom=counties)
 cat("complete.\n", file = outfile, append = TRUE)
+
 
 # ------------------ Set up cluster ------------------
 
@@ -101,6 +103,7 @@ parSapply(cl, months, FUN=function(month, year, cropscape_raster, WUSTL_FOLDER, 
     as.Date("%Y-%m-%d")
   cat("\n", format(date,"%B %Y"),": Starting analysis...")
   
+  
   # ------------------ Read in WUSTL raster ------------------
   
   cat("\n", format(date,"%B %Y"),": Reading in WUSTL raster...")
@@ -110,18 +113,22 @@ parSapply(cl, months, FUN=function(month, year, cropscape_raster, WUSTL_FOLDER, 
                              geom=counties)
   cat("complete.")
   
+  
   # ------------------ Perform pixel analysis on WUSTL raster ------------------
+  
   # Convert raster to data frame of points and determine which county each point (pixel) is in 
   cat("\n", format(date,"%B %Y"),": Converting WUSTL raster to points & determining county of each point...")
   wustl_results <- wuslt_raster_analysis(wustl_raster=wustl_raster, counties=counties)
   cat("complete.")
   
   # ------------------ Perform land type analysis ------------------
+  
   # Pixel ID is assigned by looping through each polygon 
   # See the function cov_frac_df for more details on the code 
   cat("\n", format(date,"%B %Y"),": Computing fraction land use type in each WUSTL pixel...")
   crop_results <- crop_extraction_wustl_polys(wustl_raster=wustl_raster, cropscape_raster=cropscape_raster)
   cat("complete.")
+  
   
   # ------------------ Combine results and save as csv file ------------------
   
@@ -142,5 +149,5 @@ parSapply(cl, months, FUN=function(month, year, cropscape_raster, WUSTL_FOLDER, 
 
 # ------------------ End of script. Stop cluster ------------------
 
-cat("Completed analysis for", year, "\nTotal time elapsed:", time_elapsed_pretty(start.time, Sys.time()))
-stopCluster(cl)
+cat("Completed analysis for", year, "\nTotal time elapsed:", time_elapsed_pretty(start.time, Sys.time())) # Print total time elapsed
+stopCluster(cl) # Stop cluster
