@@ -10,3 +10,4 @@ The structure of this folder is included for reference, even though most folders
  - figs: relevant figures, outputted by `WUSTL_data_exploration.ipynb` Jupyter Notebook
  - results: repository containing csv results outputted by `dust_analysis.R`
  - SOIL: repository containing monthly WUSTL dust concentration rasters
+ - cal_cities_lat_long.csv: coordinates of major cities in California
