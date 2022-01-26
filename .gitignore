@@ -13,7 +13,9 @@ __pycache__/*
 *.nc 
 */*.nc
 
+# Data directory
 data/*
+!data/figs/*
 !data/cal_cities_lat_long.csv
 !data/README.md 
 !data/*/.gitkeep
