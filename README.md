@@ -14,7 +14,7 @@ All the data for the analysis is publically available, but is **not** included i
 - **Yearly land use maps**: We use the Cropland Data Layers (CropScape) as our source of yearly land use types, available for download [here](https://nassgeodata.gmu.edu/CropScape/). When performing the data download, the CropScape data was subsetted to the state of California and projected to a lat/lon (WGS83) grid using the tools on the user interface.
 - **CA counties shapefile**: 2016 TIGER/Line Shapefile of the various counties in California, used for subsetting to endemic counties. Shapefile publically available from the [California open data portal](https://data.ca.gov/dataset/ca-geographic-boundaries#).
 ### Data for running the python notebook 
-**NOTE:** This is for data exploration/visualization and is not required for main analysis
+**NOTE:** This notebook is included for data exploration/visualization and is not required for main analysis.
 - **Monthly dust concentration for 2016**: See above 
 - **Coordinates of major cities in CA**: Included in the data folder 
 - **Shapefile of US States**: Shapefile detailing the boundaries of US States, freely available from the US Census [here](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). This is used to clip the dust concentration data to the state of CA. 
