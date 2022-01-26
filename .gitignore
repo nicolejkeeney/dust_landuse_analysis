@@ -13,6 +13,11 @@ __pycache__/*
 *.nc 
 */*.nc
 
+data/*
+!data/cal_cities_lat_long.csv
+!data/README.md 
+!data/*/.gitkeep
+
 # Unwanted R files
 .Rdata
 .Rhistory
