@@ -54,7 +54,7 @@ The main analysis script is the R script `dust_analysis.R`, which needs to be ru
  4) Cache your personal access token so you don't have to keep inputting it each time following the instructions. I've set it up using HTTPS, not SSH. Run `gh auth login` and input your username and personal access key 
 ### 3) Run the calibration script 
 The analysis script `dust_analysis.R` gets run through the cluster through a slurm job script, where you can set some parameters for the job. The main parameter is the year for which you want to run the analysis, which is read into the script as an argument. This argument is set in the job script, a text file named for `year_Rscript.txt`., where `year` is the year you want to run the script for. You'll need to edit this textfile if you want to run the analysis for any years that I have't included a job script for, changing the arguments by editting the line `--args year` at the bottom of the file. 
- 1) To send off the job, run in the terminal `sbatch year_Rscript.txt`, replacing `year` with the year of interest (i.e. `2012_Rscript.txt` for 2012)
+ 1) To send off the job, run in the terminal `sbatch year_Rscript.txt`, replacing `year` with the year of interest (i.e. `2016_Rscript.txt` for 2016)
  2) If you want, check the job status using `squeue -u nicolekeeney`, replacing `nicolekeeney` with your savio username. 
  3) The output of the script is saved in `year_log.txt`. I've set up this outfile to record steps in the analysis process as the script is run, allowing for easier debugging. 
 ### 4) Access the results 
