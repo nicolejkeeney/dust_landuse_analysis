@@ -57,4 +57,4 @@ The analysis script `dust_analysis.R` gets run through the cluster through a slu
  2) If you want, check the job status using `squeue -u nicolekeeney`, replacing `nicolekeeney` with your savio username. 
  3) The output of the script is saved in `year_log.txt`. I've set up this outfile to record steps in the analysis process as the script is run, allowing for easier debugging. 
 ### 4) Access the results 
-The results are saved in `data/results/year`, where `year` is the year that you ran the analysis for. I used [Globus](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/data/transferring-data/using-globus-connect-savio/) to transfer the results to my personal computer.
+The results are saved in `data/results/year`, where `year` is the year that you ran the analysis for. I used [Globus](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/data/transferring-data/using-globus-connect-savio/) to transfer the results to my personal computer, which I then uploaded to my Berkeley google drive to share with group members.
