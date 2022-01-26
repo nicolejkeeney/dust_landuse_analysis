@@ -15,7 +15,7 @@ __pycache__/*
 
 # Data directory
 data/*
-!data/figs/*
+!data/figs
 !data/cal_cities_lat_long.csv
 !data/README.md 
 !data/*/.gitkeep
