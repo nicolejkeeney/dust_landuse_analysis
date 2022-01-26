@@ -8,6 +8,7 @@ nicolejkeeney@gmail.com<br>
 
 
 ## Data 
+All the data for the analysis is publically available, but is **not** included in this repository. Below, I've included information about the datasets used and information about how to download them if you'd like to run the analysis yourself. 
 ### Data for the main analysis in R
 - **Monthly dust concentration**: This dataset was produced from a combined geoscience-statistical method outlined in van Donkelaar et al. (2019) and is made [publicly available on Box](https://wustl.app.box.com/s/wk3144jc6xfy6ujfvyv5m2yfk33nz2nn/folder/136086352053) from Washington University in St. Louis. 
 - **Yearly land use maps**: We use the Cropland Data Layers (CropScape) as our source of yearly land use types, available for download [here](https://nassgeodata.gmu.edu/CropScape/). When performing the data download, the CropScape data was subsetted to the state of California and projected to a lat/lon (WGS83) grid using the tools on the user interface.
