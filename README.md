@@ -12,14 +12,15 @@ nicolejkeeney@gmail.com<br>
 - **Monthly dust concentration**: This dataset was produced from a combined geoscience-statistical method outlined in van Donkelaar et al. (2019) and is made [publicly available on Box](https://wustl.app.box.com/s/wk3144jc6xfy6ujfvyv5m2yfk33nz2nn/folder/136086352053) from Washington University in St. Louis. 
 - **Yearly land use maps**: We use the Cropland Data Layers (CropScape) as our source of yearly land use types, available for download [here](https://nassgeodata.gmu.edu/CropScape/). When performing the data download, the CropScape data was subsetted to the state of California and projected to a lat/lon (WGS83) grid using the tools on the user interface.
 - **CA counties shapefile**: 2016 TIGER/Line Shapefile of the various counties in California, used for subsetting to endemic counties. Shapefile publically available from the [California open data portal](https://data.ca.gov/dataset/ca-geographic-boundaries#).
-### Data for running the python notebook (data exploration/visualization; not required for main analysis)
+### Data for running the python notebook 
+**NOTE:** This is for data exploration/visualization and is not required for main analysis
 - **Monthly dust concentration for 2016**: See above 
 - **Coordinates of major cities in CA**: Included in the data folder 
 - **Shapefile of US States**: Shapefile detailing the boundaries of US States, freely available from the US Census [here](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html). This is used to clip the dust concentration data to the state of CA. 
 
 
 ## Data exploration in python
-Since I'm more familiar using python for data visualization of netcdf files, I created a Jupyter Notebook, titled `WUSTL_data_exploration.ipynb`, to explore the WUSTL dust concentration data using xarray, hvplot, cartopy, and matplotlib.For example, you can use hvplot to create an interactive visualization of each month of data. Below is a static png image of the dust concentration for the month of August. In the notebook, I also include code to generate an interactive plot that shows dust concentration for each month in 2016 (I've generated it at a lower resolution to reduce runtime). In the `data/figs` folder, you can find the interactive plot as an html file, which can be opened in your browser easily from your personal computer, along with the static png file of one month of data, and the seasonal dust concentration means (displayed below). 
+Since I'm more familiar using python for data visualization of netcdf files, I created a Jupyter Notebook, titled `WUSTL_data_exploration.ipynb`, to explore the WUSTL dust concentration data using xarray, hvplot, cartopy, and matplotlib. For example, you can use hvplot to create an interactive visualization of each month of data. Below is a static png image of the dust concentration for the month of August. In the notebook, I also include code to generate an interactive plot that shows dust concentration for each month in 2016 (I've generated it at a lower resolution to reduce runtime). In the `data/figs` folder, you can find the interactive plot as an html file, which can be opened easily in your browser, along with the static png file of one month of data, and the seasonal dust concentration means (displayed below). 
 
 ![mean seasonal dust](data/figs/2016_dust_seasonal_av.png "August 2016 mean seasonal dust conc")
 
