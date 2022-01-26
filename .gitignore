@@ -15,7 +15,9 @@ data/*
 *.nc 
 */*.nc
 
-# Rout files 
+# Unwanted R files
+.Rdata
+.Rhistory
 *.Rout
 
 # slurm files 
