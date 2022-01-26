@@ -6,7 +6,7 @@
 ## Last Modified: 
 ##    - Added flexibility for using script for multiple years (01-18-2022)
 ##
-## Author:Nicole Keeney
+## Author: Nicole Keeney
 ## Email: nicolejkeeney@gmail.com
 ## GitHub: nicolejkeeney
 
