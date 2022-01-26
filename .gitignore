@@ -11,6 +11,7 @@ __pycache__/*
 
 # Anything in data folder or any netcdf file. Allow figures
 data/*
+data/*/*.gitkeep
 !data/figs/
 !cal_cities_lat_long.csv
 *.nc 
