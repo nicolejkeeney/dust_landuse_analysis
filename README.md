@@ -23,7 +23,7 @@ All the data for the analysis is publically available, but is **not** included i
 ## Data exploration in python
 Since I'm more familiar using python for data visualization of netcdf files, I created a Jupyter Notebook, titled `WUSTL_data_exploration.ipynb`, to explore the WUSTL dust concentration data using xarray, hvplot, cartopy, and matplotlib. For example, you can use hvplot to create an interactive visualization of each month of data. Below is a static png image of the dust concentration for the month of August. In the notebook, I also include code to generate an interactive plot that shows dust concentration for each month in 2016 (I've generated it at a lower resolution to reduce runtime). In the `data/figs` folder, you can find the interactive plot as an html file, which can be opened easily in your browser, along with other relevant figures. The notebook also includes code to generate a map of seasonal dust concentration means, shown below for 2016. 
 
-![mean seasonal dust](data/figs/2016_dust_seasonal_av.png "August 2016 mean seasonal dust conc")
+![mean seasonal dust](data/figs/2016_map_seasonal_av.png "August 2016 mean seasonal dust conc")
 
 ### Running the notebook: conda environment
 I've included an environment file with the repository that includes all the neccessary python dependencies to run the notebook from your local computer. You'll need anaconda and python installed first. **This environment is provided only for running the jupyter notebook; you don't need to deal with the conda environment if you're just running the main analysis script in R.**  <br><br> 
