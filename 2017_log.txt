@@ -1,0 +1,675 @@
+Created outfile 2017_log.txt
+Performing analysis for 2017 ...
+Reading in cropscape raster & central valley shapefile (time invariant)...complete.
+starting worker pid=1127 on localhost:11992 at 10:39:20.146
+starting worker pid=1123 on localhost:11992 at 10:39:20.146
+starting worker pid=1125 on localhost:11992 at 10:39:20.146
+starting worker pid=1122 on localhost:11992 at 10:39:20.146
+starting worker pid=1120 on localhost:11992 at 10:39:20.146
+starting worker pid=1126 on localhost:11992 at 10:39:20.146
+starting worker pid=1124 on localhost:11992 at 10:39:20.146
+starting worker pid=1131 on localhost:11992 at 10:39:20.147
+starting worker pid=1130 on localhost:11992 at 10:39:20.147
+starting worker pid=1128 on localhost:11992 at 10:39:20.147
+starting worker pid=1129 on localhost:11992 at 10:39:20.149
+starting worker pid=1121 on localhost:11992 at 10:39:20.159
+
+Made cluster with 12 cores.-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+-- Attaching packages --------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.4     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.0
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+Loading required package: sp
+Loading required package: sp
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+Loading required package: sp
+Loading required package: sp
+Loading required package: sp
+Loading required package: sp
+Loading required package: sp
+Loading required package: sp
+Loading required package: sp
+Loading required package: sp
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+-- Conflicts ------------------------------------------ tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()
+Loading required package: sp
+Loading required package: sp
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+
+Attaching package: 'lubridate'
+
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+
+Attaching package: 'lubridate'
+
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+------------------------------------------------------------------------------
+The following object is masked from 'package:purrr':
+
+    compact
+
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+
+Attaching package: 'raster'
+
+------------------------------------------------------------------------------
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+
+Attaching package: 'raster'
+
+The following object is masked from 'package:dplyr':
+
+    select
+
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+------------------------------------------------------------------------------
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3; sf_use_s2() is TRUE
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+------------------------------------------------------------------------------
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:raster':
+
+    intersect, union
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+
+Attaching package: 'plyr'
+
+The following objects are masked from 'package:dplyr':
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
+The following object is masked from 'package:purrr':
+
+    compact
+
+
+ January 2017 : Starting analysis...
+ January 2017 : Reading in WUSTL raster...
+ March 2017 : Starting analysis...
+ March 2017 : Reading in WUSTL raster...
+ July 2017 : Starting analysis...
+ July 2017 : Reading in WUSTL raster...
+ October 2017 : Starting analysis...
+ October 2017 : Reading in WUSTL raster...
+ December 2017 : Starting analysis...
+ December 2017 : Reading in WUSTL raster...
+ May 2017 : Starting analysis...
+ May 2017 : Reading in WUSTL raster...
+ February 2017 : Starting analysis...
+
+  February 2017November 2017  : Reading in WUSTL raster...: Starting analysis...
+ November 2017 : Reading in WUSTL raster...
+ June 2017 : Starting analysis...
+ June 2017 : Reading in WUSTL raster...
+ April 2017 : Starting analysis...
+ April 2017 : Reading in WUSTL raster...
+ August 2017 : Starting analysis...
+ August 2017 : Reading in WUSTL raster...
+ September 2017 : Starting analysis...
+ September 2017 : Reading in WUSTL raster...complete.
+ August 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ April 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ October 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ June 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ March 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ December 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ November 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ May 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ January 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ February 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ September 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ July 2017 : Converting WUSTL raster to points & determining county of each point...complete.
+ November 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ May 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ February 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ October 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ December 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ January 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ August 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ June 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ July 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ April 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ September 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ March 2017 : Computing fraction land use type in each WUSTL pixel...complete.
+ August 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ August 2017 : Saving results as a csv file to  data/results/2017/201708.csv ...complete.
+ May 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ May 2017 : Saving results as a csv file to  data/results/2017/201705.csv ...
+ August 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:29:52 
+complete.
+ February 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ February 2017 : Saving results as a csv file to  data/results/2017/201702.csv ...complete.
+ January 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ January 2017 : Saving results as a csv file to  data/results/2017/201701.csv ...complete.
+ October 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ October 2017 : Saving results as a csv file to  data/results/2017/201710.csv ...complete.
+ December 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ December 2017 : Saving results as a csv file to  data/results/2017/201712.csv ...
+ May 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:29:56 
+
+ February 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:29:59 
+
+ October 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:30:00 
+
+ January 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:30:01 
+
+ December 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:30:01 
+complete.
+ March 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ March 2017 : Saving results as a csv file to  data/results/2017/201703.csv ...complete.
+ July 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ July 2017 : Saving results as a csv file to  data/results/2017/201707.csv ...complete.
+ June 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+complete.
+ April 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ June 2017 : Saving results as a csv file to  data/results/2017/201706.csv ...
+ April 2017 : Saving results as a csv file to  data/results/2017/201704.csv ...
+ March 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:30:08 
+
+ July 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:30:09 
+
+ June 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:30:12 
+
+ April 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:30:12 
+complete.
+ September 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ September 2017 : Saving results as a csv file to  data/results/2017/201709.csv ...
+ September 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:30:41 
+complete.
+ November 2017 : Combining WUSTL and cropscape analyses...Joining, by = c("pixel_ID", "SOIL")
+
+ November 2017 : Saving results as a csv file to  data/results/2017/201711.csv ...
+ November 2017 : COMPLETED ANALYSIS. Total time elapsed: 00:30:49 
+Warning messages:
+1: In if (x == "" | x == ".") { :
+  the condition has length > 1 and only the first element will be used
+2: In if (!start %in% c("htt", "ftp")) { :
+  the condition has length > 1 and only the first element will be used
+3: In if (fileext %in% c(".GRD", ".GRI")) { :
+  the condition has length > 1 and only the first element will be used
+4: In if (!file.exists(x)) { :
+  the condition has length > 1 and only the first element will be used
+5: In if ((fileext %in% c(".HE5", ".NC", ".NCF", ".NC4", ".CDF", ".NCDF",  :
+  the condition has length > 1 and only the first element will be used
